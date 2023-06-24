@@ -3,6 +3,9 @@
 	
 	$: correct = answer.toLowerCase() === 'and' ? true : false;
 	
+	$: showMap = false;
+	$: image = showMap ? "q2.png" : "q2img.jpg";
+
 </script>
 
 <div class="question-box">
@@ -12,8 +15,7 @@
 		<p><b>Quak quak!</b> <br /> Måla Erics ringfinger</p>
 		<aside style:background-color="#444cf7" />
 		<a href="/question-3">Nästa</a>
-	{:else}
-		<img src="./images/q2img.jpg" alt="frågebild" />
-		<img src="./images/q2.png" alt="kartbild" />
+		{:else}
+		<img on:click={() => showMap = !showMap} src="./images/{image}" alt="frågebild" />
 	{/if}
 </div>

@@ -3,6 +3,9 @@
 	
 	$: correct = answer.toLowerCase() === 'kejsarträd' ? true : false;
 	
+	$: showMap = false;
+	$: image = showMap ? "q4.png" : "q4img.jpg";
+
 </script>
 
 <div class="question-box">
@@ -12,8 +15,7 @@
 		<p><b>Kungligt!</b> <br /> Måla Erics pekfinger</p>
 		<aside style:background-color="#ff5526" />
 		<a href="/question-5">Nästa</a>
-	{:else}
-		<img src="./images/q4img.jpg" alt="frågebild" />
-		<img src="./images/q4.png" alt="kartbild" />
+		{:else}
+		<img on:click={() => showMap = !showMap} src="./images/{image}" alt="frågebild" />
 	{/if}
 </div>

@@ -3,6 +3,9 @@
 	
 	$: correct = answer.toLowerCase() === 'polhem' ? true : false;
 	
+	$: showMap = false;
+	$: image = showMap ? "q3.png" : "q3img.jpg";
+
 </script>
 
 <div class="question-box">
@@ -12,9 +15,8 @@
 		<p><b>Helt rätt!</b> <br /> Måla Erics långfinger</p>
 		<aside style:background-color="#fff44e" />
 		<a href="/question-4">Nästa</a>
-	{:else}
-		<img src="./images/q3img.jpg" alt="frågebild" />
-		<img src="./images/q3.png" alt="kartbild" />
+		{:else}
+		<img on:click={() => showMap = !showMap} src="./images/{image}" alt="frågebild" />
 	{/if}
 </div>
 

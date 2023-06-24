@@ -2,6 +2,9 @@
 	$: answer = '';
 	
 	$: correct = answer.toLowerCase() === 'norra tullgränd' ? true : false;
+
+	$: showMap = false;
+	$: image = showMap ? "q1.png" : "q1img.jpg";
 	
 </script>
 
@@ -13,8 +16,7 @@
 		<aside style:background-color="#ff5526" />
 		<a href="/question-2">Nästa</a>
 	{:else}
-		<img src="./images/q1img.jpg" alt="frågebild" />
-		<img src="./images/q1.png" alt="kartbild" />
+		<img on:click={() => showMap = !showMap} src="./images/{image}" alt="frågebild" />
 	{/if}
 </div>
 

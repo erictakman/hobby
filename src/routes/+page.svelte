@@ -93,7 +93,7 @@
 
 	:global(img) {
 		width: 90%;
-		object-fit: cover;
+		object-fit: contain;
 		border-radius: 1rem 1rem 1rem 1rem;
 	}
 </style>
