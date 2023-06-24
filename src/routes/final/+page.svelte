@@ -22,21 +22,21 @@
 			colors[4] = color
 			if (
 				colors[0] === '#ff5526' &&
-    		colors[1] === '#fff44e' &&
-    		colors[2] === '#444cf7' &&
+    		colors[1] === '#444cf7' &&
+    		colors[2] === '#fff44e' &&
     		colors[3] === '#ff5526' &&
     		colors[4] === '#fff44e'
 			) {
 				setTimeout(() => {
 					console.log("correct")
 					correct = true;
-				}, 1000)
+				}, 500)
 			} else {
 				setTimeout(() => {
 					correct = false;
 					colors = ["#f3a8b1", "#f3a8b1", "#f3a8b1", "#f3a8b1", "#f3a8b1"]
 					currentNail = 1;
-				}, 1000)
+				}, 500)
 			}
 		}
 	}
@@ -85,6 +85,7 @@
 		justify-content: space-between;
 		width: 300px;
 		margin: 0 auto;
+		margin-bottom: 1rem;
 	}
 	
 	.orange {
@@ -92,6 +93,7 @@
 		height: 75px;
 		width: 75px;
 		border-radius: 25%;
+		border: 0.4rem solid pink;
 		margin: 0 auto;
 	}
 
@@ -100,6 +102,7 @@
 		height: 75px;
 		width: 75px;
 		border-radius: 25%;
+		border: 0.4rem solid pink;
 		margin: 0 auto;
 	}
 
@@ -108,6 +111,7 @@
 		height: 75px;
 		width: 75px;
 		border-radius: 25%;
+		border: 0.4rem solid pink;
 		margin: 0 auto;
 	}
 

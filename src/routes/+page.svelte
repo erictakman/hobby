@@ -45,7 +45,7 @@
 		align-items: center;
 		text-align: center;
 		width: 90vw;
-		padding: 4rem 0;
+		padding: 1rem 0;
 		gap: 1rem;
 		background-color: white;
 		border-radius: 1rem;
@@ -61,10 +61,12 @@
 
 	:global(h1) {
 		font-size: x-large;
+		padding: 0 2rem;
 	}
 
 	:global(h2) {
 		font-size: large;
+		padding: 0 1rem;
 	}
 
 	:global(a) {
@@ -86,5 +88,12 @@
 	:global(p) {
 		font-size: large;
 		line-height: 2rem;
+		padding: 0 2rem;
+	}
+
+	:global(img) {
+		width: 90%;
+		object-fit: cover;
+		border-radius: 1rem 1rem 1rem 1rem;
 	}
 </style>
